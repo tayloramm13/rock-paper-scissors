@@ -6,29 +6,17 @@ Remember to test it out by console.log() your code
 
 
 
-Plan:
+Plan: Played completely from Console
 - The game will be played in a 'best 2 out of 3' scenario -
 (max the user gets 3 attempts)
 
-- Create a textbox for user to input either "rock", "paper", or "scissors"
+- Create function getComputerChoice() and set it to randomly return 'Rock', 'Paper' or 'Scissors'
+    *console.log to make sure it is returning expected output*
 
-- Once submitted - computer will count down flashing "1-Rock 2-Paper 3-Scissor 4-SHOOT!"
+- Create function (with 2 parameters)that plays a single round of R.P.S - 
+    - (playerSelection, computerSelection)
+        *make functions playerSelection case-insensitive*
+    - return string that declares the winner of the round (i.e "LOSER! Paper beats Rock")
 
-- After "4-SHOOT!" computer will provide their choice...
-
-- The computer will formulate a counter variable (choice) based on the number submit attempts from user: 
-    ex: 
-        Attempt #1) computer will ALWAYS generate scissors.
-        Attempt #2) computer will ALWAYS generate paper.
-        Attempt #3) computer will ALWAYS generate rock.
-
-- For any attempt if user has same guess as computer show "Draw"
-
-- For 1st attempt...if user has paper for 1st attempt display "lOSER!"
-    - Else user has rock display "WINNER!"
-
-- For 2ND attempt...if user has rock for 1st attempt display "lOSER!"
-    - Else user has scissors display "WINNER!
-
-- For 3rd attempt...if user has scissors for 1st attempt display "lOSER!"
-    - Else user has paper display "WINNER!
+- Create new function game() and call the playRound() function INSIDE of this function to play 5-round game that keeps score AND reports a winner/loser at the end
+    *use loops to play 5 rounds*

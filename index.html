@@ -7,8 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="javascript.js">
-        console.log("Hello World");
+    <script>
+       function getComputerChoice() {
+        const word = ['Rock', 'Paper', 'Scissor'];
+        const words = word[Math.floor(Math.random()*word.length)];
+        alert('The computer chose:' + " " + words);
+       }
     </script>
 </body>
 </html>

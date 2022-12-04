@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-       function getComputerChoice() {
-        const word = ['Rock', 'Paper', 'Scissor'];
-        const words = word[Math.floor(Math.random()*word.length)];
-        alert('The computer chose:' + " " + words);
-       }
+      //This creates a random computer selection of either 'Rock', 'Paper', or 'Scissor'//
+      function getComputerChoice() {
+        const word = ["Rock", "Paper", "Scissor"];
+        const words = word[Math.floor(Math.random() * word.length)];
+        alert("The computer chose:" + " " + words);
+      }
+
+      //This function will play a single round of the game//
+      //Create two parameters//
+      //Return a string that declares winner/loser of the round//
+
+      const playerSelection = prompt("Begin by picking either 'Rock, Paper, Scissors'").toLowerCase;
+      const computerSelection = getComputerChoice();
+      console.log(roundOne(playerSelection, computerSelection));
+
+      function roundOne(playerSelection, computerSelection) {
+        if (playerSelection === computerSelection) {
+          return 'Draw!';
+        } else if (playerSelection === "Rock" && computerSelection === "Paper") {
+          return "LOSER! Paper covers Rock.";
+        } else if (playerSelection === "Paper" && computerSelection === "Rock") {
+          return "Winner Winner Chicken Dinner";
+        } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
+          return "Winner Winner Chicken Dinner";
+        } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
+          return "LOSER! Rock cuts Paper.";
+        }
+;
+      }
+
+     
+
     </script>
-</body>
-</html>
+  </body>
+</html> 

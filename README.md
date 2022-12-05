@@ -20,3 +20,11 @@ Plan: Played completely from Console
 
 - Create new function game() and call the playRound() function INSIDE of this function to play 5-round game that keeps score AND reports a winner/loser at the end
     *use loops to play 5 rounds*
+
+    - Make for loop - telling that there will be a max of 5 rounds
+    for (let i = 0; i < 5; i++)
+    - if playerSelection wins 3 out of 5 games (accumulates 3 points) return "You are ultimate champion" 
+        - i === 4 and playerSelection has 3 points
+    - if computerSelection wins 3 out of 5 games (accumulates 3 points) return "I am the ultimate computer champion"
+        - i === 4 and computerSelection has 3 points
+    - if after 4 rounds both computerSelection and playerSelection have 2 points play a 5th round

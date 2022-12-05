@@ -9,39 +9,58 @@
   <body>
     <script>
       //This creates a random computer selection of either 'Rock', 'Paper', or 'Scissor'//
+      let playerscore = localStorage.getItem('playerScore');
+      document.querySelector("#playerScore").textContent = playerscore;
+      let computerscore = localStorage.getItem('computerScore');
+      document.querySelector("computerScore").textContent = computerscore; 
+
       function getComputerChoice() {
-        const word = ["Rock", "Paper", "Scissor"];
-        const words = word[Math.floor(Math.random() * word.length)];
-        alert("The computer chose:" + " " + words);
+        var Number = Math.floor(Math.random() * 3);
+        switch (Number) {
+          case 0:
+            return "rock";
+          case 1:
+            return "scissor";
+          case 2:
+            return "paper";
+        }
       }
 
       //This function will play a single round of the game//
       //Create two parameters//
       //Return a string that declares winner/loser of the round//
 
-      const playerSelection = prompt("Begin by picking either 'Rock, Paper, Scissors'").toLowerCase;
+      const playerSelection = prompt(
+        "Begin by picking either 'Rock, Paper, Scissors'"
+      ).toLowerCase;
       const computerSelection = getComputerChoice();
       console.log(roundOne(playerSelection, computerSelection));
 
       function roundOne(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
-          return 'Draw!';
-        } else if (playerSelection === "Rock" && computerSelection === "Paper") {
-          return "LOSER! Paper covers Rock.";
-        } else if (playerSelection === "Paper" && computerSelection === "Rock") {
-          return "Winner Winner Chicken Dinner";
-        } else if (playerSelection === "Scissors" && computerSelection === "Paper") {
-          return "Winner Winner Chicken Dinner";
-        } else if (playerSelection === "Paper" && computerSelection === "Scissors") {
-          return "LOSER! Rock cuts Paper.";
+          console.log("Draw!");
+        } else if (
+          playerSelection === "Rock" &&
+          computerSelection === "Paper"
+        ) {
+          console.log("LOSER! Paper covers Rock.");
+        } else if (
+          playerSelection === "Paper" &&
+          computerSelection === "Rock"
+        ) {
+          console.log("Winner Winner Chicken Dinner");
+        } else if (
+          playerSelection === "Scissors" &&
+          computerSelection === "Paper"
+        ) {
+          console.log("Winner Winner Chicken Dinner");
+        } else if (
+          playerSelection === "Paper" &&
+          computerSelection === "Scissors"
+        ) {
+          console.log("LOSER! Rock cuts Paper.");
         }
       }
-
-      function game(roundOne) {
-        for (let i = 0; i < 5; i++)
-      }
-     
-
     </script>
   </body>
-</html> 
+</html>

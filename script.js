@@ -1,5 +1,5 @@
 const selectionButtons = document.querySelectorAll('[data-selection]')
-const finalColumn = document.querySelector('[data-final-column')
+const finalColumn = document.querySelector('[data-final-column]')
 const SELECTIONS = [
     {
         name: 'rock',
@@ -7,15 +7,16 @@ const SELECTIONS = [
         beats: 'scissors'
     }, 
     {
-        name: 'toilet-paper',
-        emoji: '🧻',
-        beats: 'rock'
-    }, 
-    {
         name: 'scissors',
         emoji: '✂️',
         beats: 'toilet-paper'
     }, 
+    {
+        name: 'toilet-paper',
+        emoji: '🧻',
+        beats: 'rock'
+    }, 
+   
 ]
 
 selectionButtons.forEach(selectionButton => {

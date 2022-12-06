@@ -9,10 +9,10 @@
   <body>
     <script>
       //This creates a random computer selection of either 'Rock', 'Paper', or 'Scissor'//
-      let playerscore = localStorage.getItem('playerScore');
+      var playerscore = localStorage.getItem("playerScore");
       document.querySelector("#playerScore").textContent = playerscore;
-      let computerscore = localStorage.getItem('computerScore');
-      document.querySelector("computerScore").textContent = computerscore; 
+      var computerscore = localStorage.getItem("computerScore");
+      document.querySelector("computerScore").textContent = computerscore;
 
       function getComputerChoice() {
         var Number = Math.floor(Math.random() * 3);
@@ -38,27 +38,24 @@
 
       function roundOne(playerSelection, computerSelection) {
         if (playerSelection === computerSelection) {
-          console.log("Draw!");
+          return "Tiebreak";
         } else if (
-          playerSelection === "Rock" &&
-          computerSelection === "Paper"
+          (playerSelection === "Rock" && computerSelection === "Paper") ||
+          (playerSelection === "Paper" && computerSelection === "Scissors") ||
+          (playerSelection === "Scissors" && computerSelection === "Rock")
         ) {
-          console.log("LOSER! Paper covers Rock.");
+          return "Computer won";
         } else if (
-          playerSelection === "Paper" &&
-          computerSelection === "Rock"
+          (playerSelection === "Paper" && computerSelection === "Rock") ||
+          (playerSelection === "Scissors" && computerSelection === "Paper") ||
+          (playerSelection == "Rock" && computerSelection === "Scissors")
         ) {
-          console.log("Winner Winner Chicken Dinner");
-        } else if (
-          playerSelection === "Scissors" &&
-          computerSelection === "Paper"
-        ) {
-          console.log("Winner Winner Chicken Dinner");
-        } else if (
-          playerSelection === "Paper" &&
-          computerSelection === "Scissors"
-        ) {
-          console.log("LOSER! Rock cuts Paper.");
+          return "You won";
+        }
+
+        function game(roundOne) {
+          for (let i = 0; i < 5; i++);
+          console.log(roundOne);
         }
       }
     </script>

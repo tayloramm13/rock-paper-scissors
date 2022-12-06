@@ -4,15 +4,28 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css/" />
     <title>Document</title>
   </head>
   <body>
+    <div class="selections">
+      <button class="selections">🪨</button>
+      <button class="selections">🧻</button>
+      <button class="selections">✂️</button>
+    </div>
+    <div class="results">
+      <div>
+        You
+        <span class="result-score">0</span>
+      </div>
+      <div>
+        Computer
+        <span class="result-score" >0</span>
+      </div>
+    </div>
     <script>
-      //This creates a random computer selection of either 'Rock', 'Paper', or 'Scissor'//
-      var playerscore = localStorage.getItem("playerScore");
-      document.querySelector("#playerScore").textContent = playerscore;
-      var computerscore = localStorage.getItem("computerScore");
-      document.querySelector("computerScore").textContent = computerscore;
+
+      //This creates a random computer selection of either 'Rock', 'Paper', or 'Scissor'//;
 
       function getComputerChoice() {
         var Number = Math.floor(Math.random() * 3);

@@ -64,3 +64,5 @@ function randomSelection() {
     const randomIndex = Math.floor(Math.random() * SELECTIONS.length)
     return SELECTIONS[randomIndex]
 }
+
+//Next task is trying to loop with a For statement so game is only played 5 rounds - winner is best 3 out of 5//
